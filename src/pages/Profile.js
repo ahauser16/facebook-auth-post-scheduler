@@ -9,15 +9,18 @@ export default function Profile() {
         <h1>LEFT CONTENT</h1>
         <h1>LEFT CONTENT</h1>
         <h1>LEFT CONTENT</h1>
-        <h1>LEFT CONTENT</h1>
       </LeftContent>
       <MidContent>
         <h1>MID CONTENT</h1>
         <h1>MID CONTENT</h1>
         <h1>MID CONTENT</h1>
         <h1>MID CONTENT</h1>
+        <h1>MID CONTENT</h1>
       </MidContent>
       <RightContent>
+        <h1>RIGHT CONTENT</h1>
+        <h1>RIGHT CONTENT</h1>
+        <h1>RIGHT CONTENT</h1>
         <h1>RIGHT CONTENT</h1>
         <h1>RIGHT CONTENT</h1>
         <h1>RIGHT CONTENT</h1>
