@@ -25,6 +25,9 @@ export default function RootLayout() {
 }
 
 const AppGridContainer = styled.div`
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   position: relative;
   min-height: 100vh;
   display: grid;
@@ -38,12 +41,11 @@ const AppGridContainer = styled.div`
 
 const MainWrapper = styled.main`
   grid-area: mainContent;
-  /* position: relative; */
+  position: relative;
   margin: 0 auto;
   padding: 0;
   max-width: 1380px;
-  z-index: -1;
+  z-index: 1;
   /* background-color: lightblue; */
   overflow: hidden;
 `;
-

@@ -30,12 +30,10 @@ const SubGridWrapper = styled.div`
   height: 100%;
   grid-template-rows: 1fr;
   grid-template-columns: 2fr 7fr 2fr;
+  max-width: 1380px;
+  z-index: 0;
 
-  //   margin: 0 auto;
-  //   padding: 0;
-  //   grid-column: 1 / 3;
-  //   max-width: 1380px;
-  //   background-color: lightblue;
+  margin: 0 auto;
 `;
 
 const LeftContent = styled.div`
@@ -59,8 +57,8 @@ const LeftContent = styled.div`
 const MidContent = styled.div`
   margin: 0;
   padding: 0;
-  /* width: 100%;
-  height: 100%; */
+  width: 100%;
+  height: 100%;
   background-color: rgba(255, 255, 255, 0.2);
   grid-column-start: 2;
   grid-column-end: 3;
@@ -92,25 +90,3 @@ const RightContent = styled.div`
   color: black;
 `;
 
-const UnderlayWrapper = styled.div`
-  grid-row: 2/3;
-
-  display: grid;
-  grid-template-columns: repeat(10, 10%);
-`;
-
-const UnderlayCol = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-wrap: no-wrap;
-  justify-content: space-around;
-  align-items: center;
-`;
-
-const CardImg = styled.div`
-  width: 64px;
-  height: 89px;
-  background-color: rgba(0, 0, 0, 0.5);
-  flex-grow: 1 0 auto;
-  margin: 5px 0;
-`;

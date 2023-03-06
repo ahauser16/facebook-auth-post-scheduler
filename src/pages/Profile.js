@@ -33,7 +33,7 @@ export default function Profile() {
 const MainContent = styled.main`
   margin: 0 auto;
   padding: 0;
-  grid-column: 2 / 3;
+  grid-area: mainContent;
   max-width: 1380px;
   background-color: lightblue;
 `;

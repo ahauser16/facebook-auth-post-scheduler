@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html, body {
+  display: block;
   margin: 0;
   padding: 0;
   color: #e6ddf9;
