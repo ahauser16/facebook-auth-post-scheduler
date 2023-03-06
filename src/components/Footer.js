@@ -19,19 +19,29 @@ export default function Footer() {
               <AiFillTwitterSquare size={30} />
             </FooterItem>
             <FooterItem>
-              <FooterNavLink to="/about" target="_blank">About Us</FooterNavLink>
+              <FooterNavLink to="/about" target="_blank">
+                About Us
+              </FooterNavLink>
             </FooterItem>
             <FooterItem>
-              <FooterNavLink to="/blog" target="_blank">Our Blog</FooterNavLink>
+              <FooterNavLink to="/blog" target="_blank">
+                Our Blog
+              </FooterNavLink>
             </FooterItem>
             <FooterItem>
-              <FooterNavLink to="/contact" target="_blank">Contact Us</FooterNavLink>
+              <FooterNavLink to="/contact" target="_blank">
+                Contact Us
+              </FooterNavLink>
             </FooterItem>
             <FooterItem>
-              <FooterNavLink to="/partners" target="_blank">Partners</FooterNavLink>
+              <FooterNavLink to="/partners" target="_blank">
+                Partners
+              </FooterNavLink>
             </FooterItem>
             <FooterItem>
-              <FooterNavLink to="/policies" target="_blank">Policies</FooterNavLink>
+              <FooterNavLink to="/policies" target="_blank">
+                Policies
+              </FooterNavLink>
             </FooterItem>
           </Items>
         </FootNav>
@@ -42,12 +52,16 @@ export default function Footer() {
 
 const FooterWrapper = styled.footer`
   display: flex;
-  flex: 1;
+  position: fixed;
+  bottom: 0;
   margin: 0;
   padding: 0;
-  grid-column: 1 / 4;
+  grid-area: footer;
   width: 100%;
-  background-color: rgb(25, 24, 31);
+  background-color: rgba(25, 24, 31, .5);
+
+  backdrop-filter: blur(15px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
 `;
 
 const FollowUs = styled.h3`

@@ -6,18 +6,19 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   }
 
-  body {
+  html, body {
   margin: 0;
+  padding: 0;
   color: #e6ddf9;
   font-size: 14px;
-  display: block;
   }
 
+  body {
+  height: 100vh;
+  width: 100vw;
+}
+
   :root {
-  min-height: 100vh;
-  /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.2em; */
   background-image: radial-gradient(ellipse at top left, #7f50e4, #4c05d0);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
