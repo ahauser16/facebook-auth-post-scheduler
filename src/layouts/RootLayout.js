@@ -5,17 +5,14 @@ import { Outlet } from "react-router-dom";
 import AuthConsumer from "../context/UserAuthentication";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Underlay from "../components/Underlay";
 
 export default function RootLayout() {
   const [authenticated, dispatch] = AuthConsumer();
-  console.log(authenticated);
 
   return (
     <AppGridContainer>
       <GlobalStyle />
       <Header />
-      <Underlay />
       <MainWrapper>
         <Outlet />
       </MainWrapper>
@@ -45,7 +42,6 @@ const MainWrapper = styled.main`
   margin: 0 auto;
   padding: 0;
   max-width: 1380px;
-  z-index: 1;
   /* background-color: lightblue; */
   overflow: hidden;
 `;

@@ -1,26 +1,16 @@
 import styled from "styled-components";
+import Login from "./Login";
 
 export default function Home() {
   return (
     <SubGridWrapper>
-      <LeftContent>
-        Left Content
-        Left Content
-        Left Content
-        Left Content
-        Left Content
-        </LeftContent>
+      <LeftContent></LeftContent>
       <MidContent>
-        <h1>Homepage</h1>
-        <h2>an unprotected page</h2>
+        {/* <h1>Homepage</h1>
+        <h2>an unprotected page</h2> */}
+        {/* <Login /> */}
       </MidContent>
-      <RightContent>
-        Right Content
-        Right Content
-        Right Content
-        Right Content
-        Right Content
-      </RightContent>
+      <RightContent></RightContent>
     </SubGridWrapper>
   );
 }
@@ -30,7 +20,7 @@ const SubGridWrapper = styled.div`
   width: 100%;
   height: 100%;
   grid-template-rows: 1fr;
-  grid-template-columns: 1fr 10fr 1fr;
+  grid-template-columns: 2fr 7fr 2fr;
   max-width: 1380px;
   margin: 0 auto;
 `;

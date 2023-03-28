@@ -7,7 +7,7 @@ import {
   AiOutlineProfile,
   AiOutlineDashboard,
   AiOutlineLogout,
-  AiOutlineLogin
+  AiOutlineLogin,
 } from "react-icons/ai";
 import { FiSettings } from "react-icons/fi";
 
@@ -24,7 +24,6 @@ export default function Navbar() {
       if (drawerRef.current && drawerRef.current.contains(event.target)) {
         return;
       }
-
       toggleDrawer(false);
     };
 
@@ -48,11 +47,11 @@ export default function Navbar() {
             <AiOutlineHome /> Home
           </Nav.StyledNavLink>
         </Nav.Item>
-        {/* <Nav.Item>
-          <Nav.StyledNavLink to="/about">
-            <AiOutlineInfoCircle /> About
+        <Nav.Item>
+          <Nav.StyledNavLink to="/welcome">
+            Welcome
           </Nav.StyledNavLink>
-        </Nav.Item> */}
+        </Nav.Item>
 
         {authenticated.auth ? (
           <>
@@ -87,7 +86,8 @@ export default function Navbar() {
           <>
             <Nav.Item>
               <Nav.StyledLoginLink to="/login">
-                <AiOutlineLogin /> Login</Nav.StyledLoginLink>
+                <AiOutlineLogin /> Login
+              </Nav.StyledLoginLink>
             </Nav.Item>
           </>
         )}
@@ -105,7 +105,6 @@ const Nav = {
     align-self: flex-start;
     justify-content: space-between;
     align-items: center;
-    z-index: 1;
     max-width: 1380px;
     @media only screen and (max-width: 640px) {
       position: fixed;
@@ -181,15 +180,10 @@ const Nav = {
   StyledLoginLink: styled(Link)`
     margin: 0;
     padding: 0.5rem 1rem;
-    /* padding: 0.75rem 1.5rem; */
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     color: whitesmoke;
-    /* background-color: whitesmoke; */
-    /* border: 1px solid darkred; */
-    /* border-radius: 4px; */
-    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); */
     cursor: pointer;
     font-weight: bold;
     font-size: 1.2em;

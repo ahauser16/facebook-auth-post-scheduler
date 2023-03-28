@@ -78,7 +78,6 @@ const FootNav = styled.nav`
   align-self: flex-start;
   justify-content: space-between;
   align-items: center;
-  z-index: 1;
   max-width: 1380px;
   @media only screen and (max-width: 640px) {
     position: fixed;
