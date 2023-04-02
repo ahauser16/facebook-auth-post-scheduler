@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { NavLink, useNavigate } from "react-router-dom";
 import FilePreviewer from "../components/ImgPreviewer";
+import DropdownMenu from "../components/DropdownMenu";
+import menuItems from "../data/utilsData";
+import ZipCodeInput from "../components/ZipCodeInput";
+import AddressLineOneInput from "../components/AddressLineOneInput";
+import AddressLineTwo from "../components/AddressLineTwoInput";
+import FirstNameInput from "../components/FirstNameInput";
+import LastNameInput from "../components/LastNameInput";
+import UserNameInput from "../components/UserNameInput";
+import EmailInput from "../components/EmailInput";
+import MobileInput from "../components/MobileInput";
+import CityInput from "../components/CityInput";
 
-export default function StepOne() {
+export default function StepOne(props) {
   // const { register, handleSubmit } = useForm();
+
+  const [selectedState, setSelectedState] = useState("");
+
+  const handleStateSelect = (state) => {
+    setSelectedState(state);
+  };
 
   return (
     <CardContainer>
@@ -28,63 +45,35 @@ export default function StepOne() {
       <CardRight>
         <FormContainer>
           <Row>
-            <Label>
-              First Name
-              <Input placeholder="First Name" />
-            </Label>
-            <Label>
-              Last Name
-              <Input placeholder="Last Name" />
-            </Label>
+            <FirstNameInput />
+            <LastNameInput />
           </Row>
           <Row>
-            <Label>
-              User Name
-              <Input placeholder="User Name" />
-            </Label>
+            <UserNameInput />
           </Row>
           <Row>
-            <Label>
-              Address Line 1
-              <Input placeholder="Address Line 1" />
-            </Label>
+            <AddressLineOneInput />
           </Row>
           <Row>
-            <Label>
-              Address Line 2
-              <Input placeholder="Address Line 2" />
-            </Label>
+            <AddressLineTwo />
           </Row>
           <Row>
-            <Label>
-              State
-              <Input type="dropdown" placeholder="State" />
-            </Label>
+            <CityInput />
+            <DropdownMenu />
+            <ZipCodeInput />
           </Row>
           <Row>
-            <Label>
-              Zip Code
-              <Input placeholder="Zip Code" />
-            </Label>
-          </Row>
-          <Row>
-            <Label>
-              Email
-              <Input placeholder="Email" />
-            </Label>
-          </Row>
-          <Row>
-            <Label>
-              Mobile
-              <Input placeholder="Mobile" />
-            </Label>
+            <EmailInput />
+            <MobileInput />
           </Row>
         </FormContainer>
       </CardRight>
+
       <CardFooter>
         <FormBtn>BACK</FormBtn>
         <FormBtn>NEXT</FormBtn>
       </CardFooter>
+
     </CardContainer>
   );
 }
@@ -118,7 +107,6 @@ const SubCardHeader = styled(CardHeader)`
   background-color: var(--secondary-color);
 `;
 
-
 const CardFooter = styled.footer`
   padding: 1rem;
   background-color: var(--primary-color);
@@ -128,12 +116,11 @@ const CardFooter = styled.footer`
   grid-area: FooterArea;
   display: flex;
   flex-direction: row;
-  `;
+`;
 
-  const SubCardFooter = styled(CardFooter)`
-    background-color: var(--secondary-color);
-    
-  `;
+const SubCardFooter = styled(CardFooter)`
+  background-color: var(--secondary-color);
+`;
 
 const CardHeaderTxt = styled.h1`
   margin: 0;
@@ -186,25 +173,6 @@ const ProfilePicContainer = styled.article`
   max-width: 200px;
   text-align: center;
   justify-items: center;
-  `;
-
-const Label = styled.label`
-  margin: 0.5rem;
-  display: inline-block;
-  font-size: 0.8rem;
-  color: #767676;
-  /* background-color: red; */
-  color: whitesmoke;
-  width: 100%;
-`;
-
-const Input = styled.input`
-  margin: 0;
-  display: inline-block;
-  border-radius: 6px;
-  padding: 0.5rem;
-  border: solid 1px #9b9b9b;
-  width: 100%;
 `;
 
 const FormContainer = styled.form`
@@ -216,6 +184,7 @@ const Row = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
 `;
 
 const FormBtn = styled(NavLink)`
