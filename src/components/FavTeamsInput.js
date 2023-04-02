@@ -1,24 +1,23 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-function AddressLineOneInput(props) {
-  const [addressLine1, setAddressLine1] = useState("");
+function FavTeamsInput(props) {
+  const [favTeams, setFavTeams] = useState("");
 
   const handleInputChange = (event) => {
-    setAddressLine1(event.target.value);
+    setFavTeams(event.target.value);
     props.onChange(event.target.value);
   };
-
   return (
     <>
-      <Label htmlFor="addressLine1">
-        Address Line 1:
+      <Label>
+        Favorite Teams:
         <StyledInput
-          placeholder="Address Line 1"
+          placeholder="NY Yankees, CO Broncos, LA Lakers, etc"
           type="text"
-          id="addressLine1"
-          name="addressLine1"
-          value={addressLine1}
+          id="favTeams"
+          name="favTeams"
+          value={favTeams}
           onChange={handleInputChange}
         />
       </Label>
@@ -26,7 +25,7 @@ function AddressLineOneInput(props) {
   );
 }
 
-export default AddressLineOneInput;
+export default FavTeamsInput;
 
 const Label = styled.label`
   margin: 0.5rem;

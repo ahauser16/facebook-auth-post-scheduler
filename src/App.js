@@ -5,10 +5,9 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 
-// USER AUTH CONTEXT
+// CONTEXT
 import { AuthProvider, RequireAuth } from "./context/UserAuthentication";
-// import { auth } from "./index";
-
+import { FormStateProvider } from "./context/FormState";
 //LAYOUTS
 import RootLayout from "./layouts/RootLayout";
 
@@ -21,24 +20,27 @@ import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
+import Welcome from "./pages/Welcome";
 import StepOne from "./pages/StepOne";
 import StepTwo from "./pages/StepTwo";
+import StepThree from "./pages/StepThree";
 import Partners from "./pages/Partners";
 import Policies from "./pages/Policies";
 import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
 import UserDashboard from "./pages/UserDashboard";
-import Welcome from "./pages/Welcome";
 import Error from "./pages/Error";
 
 const myRouter = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<RootLayout />}>
-        <Route index element={<Home />} />
-        <Route exact path="welcome" element={<Welcome />} />
+        <Route index element={<Welcome />} />
+        {/* <Route index element={<Home />} /> */}
+        {/* <Route exact path="welcome" element={<Welcome />} /> */}
         <Route path="stepOne" element={<StepOne />} />
         <Route path="stepTwo" element={<StepTwo />} />
+        <Route path="StepThree" element={<StepThree />} />
         <Route path="about" element={<About />} />
         <Route path="blog" element={<Blog />} />
         <Route path="contact" element={<Contact />} />
@@ -83,11 +85,11 @@ createStore({
 function App() {
   return (
     <>
-      <StateMachineProvider>
+      <FormStateProvider>
         <AuthProvider>
           <RouterProvider router={myRouter} />
         </AuthProvider>
-      </StateMachineProvider>
+      </FormStateProvider>
     </>
   );
 }

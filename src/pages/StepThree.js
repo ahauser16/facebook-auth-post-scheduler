@@ -2,37 +2,33 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { NavLink, useNavigate } from "react-router-dom";
 
-import FavLeaguesInput from "../components/FavLeaguesInput";
-import FavTeamsInput from "../components/FavTeamsInput";
-import FavSportsInput from "../components/FavSportsInput";
-
-export default function StepTwo() {
+export default function StepThree() {
   return (
     <CardContainer>
       <CardHeader>
         <CardHeaderTxt>Account Setup</CardHeaderTxt>
-        <CardSubHeaderTxt>Step Two</CardSubHeaderTxt>
+        <CardSubHeaderTxt>Step Three</CardSubHeaderTxt>
+        <CardSubHeaderTxt>Preview Your Account!</CardSubHeaderTxt>
       </CardHeader>
       <CardLeft>
-        <FavLeaguesInput />
+        Content
         <br />
-        <p>NFL</p>
-        <FavTeamsInput />
+        Content
         <br />
-        <p>NY Yankees</p>
-        <FavSportsInput />
+        Content
         <br />
-        <p>Baseball</p>
       </CardLeft>
       <CardRight>
-        NFL, MLB, NHL, MLS
+        Content
         <br />
-        NY Yankees, Denver Broncos, LA Lakers
+        Content
+        <br />
+        Content
+        <br />
       </CardRight>
       <CardFooter>
-        {" "}
         <FormBtn>BACK</FormBtn>
-        <FormBtn>NEXT</FormBtn>
+        <FormBtn>CONFIRM</FormBtn>
       </CardFooter>
     </CardContainer>
   );
@@ -91,10 +87,6 @@ const CardFooter = styled.footer`
   display: flex;
   flex-direction: row;
 `;
-
-// const SubCardHeader = styled(CardHeader)`
-//   background-color: var(--secondary-color);
-// `;
 
 const CardHeaderTxt = styled.h1`
   margin: 0;

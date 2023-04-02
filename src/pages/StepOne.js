@@ -141,9 +141,6 @@ const CardLeft = styled.section`
   margin: 0;
   padding: 1rem;
   grid: AreaA;
-  /* justify-items: center; */
-  /* display: flex;
-  flex-direction: column; */
   max-width: 500px;
   background-color: rgba(255, 255, 255, 0.35);
   box-shadow: inset -10px 0 10px -10px rgba(0, 0, 0, 0.5);
