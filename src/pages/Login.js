@@ -78,7 +78,6 @@ const CardContainer = styled.main`
   padding: 1em;
   width: 100%;
   max-width: 800px;
-  /* border-radius: 10px; */
   display: grid;
   grid:
     "HeaderArea  HeaderArea"
@@ -86,13 +85,12 @@ const CardContainer = styled.main`
 `;
 
 const CardHeader = styled.header`
-  background-color: rgba(7, 121, 136, 0.9); //make variable for theming
+  background-color: var(--primary-color);; //make variable for theming
   border-radius: 10px 10px 0 0;
   color: #fff;
-  padding: 0.5rem 1rem;
+  padding: 1rem;
   text-align: center;
   grid-area: HeaderArea;
-  padding-top: 1em;
 `;
 
 const CardHeaderTxt = styled.h1`
@@ -126,8 +124,8 @@ const SecondaryBtn = styled(Link)`
   cursor: pointer;
   align-items: center;
   justify-content: center;
-  background-color: rgba(7, 121, 136, 0.9);
-  border: solid 2px rgba(7, 121, 136, 0.9);
+  background-color: var(--primary-color);
+  border: solid 2px var(--primary-color);
   border-radius: 10px;
   color: whitesmoke;
 `;
@@ -139,12 +137,11 @@ const RedirectAside = styled.aside`
 
 const LoginBtn = styled(NavLink)`
   display: block;
-  margin: 0;
+  margin-bottom: 25px;
   padding: 0.5rem;
   width: 100%;
-  background-color: rgba(7, 121, 136, 0.9);
-  border: solid 2px rgba(7, 121, 136, 0.9);
-  margin-bottom: 25px;
+  background-color: var(--primary-color);
+  border: solid 2px var(--primary-color);
   border-radius: 25px;
   color: whitesmoke;
   font-size: 20px;

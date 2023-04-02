@@ -80,7 +80,7 @@ const CardHeader = styled.header`
   padding-top: 1em;
 `;
 
-const CardSubHeaderTxt = styled.h4`
+const CardHeaderTxt = styled.h1`
   margin: 0;
   padding: 0;
   color: whitesmoke;
@@ -89,7 +89,7 @@ const CardSubHeaderTxt = styled.h4`
   justify-content: center;
 `;
 
-const CardHeaderTxt = styled.h1`
+const CardSubHeaderTxt = styled.h4`
   margin: 0;
   padding: 0;
   color: whitesmoke;

@@ -39,9 +39,10 @@ const AppGridContainer = styled.div`
 const MainWrapper = styled.main`
   grid-area: mainContent;
   position: relative;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   max-width: 1380px;
   /* background-color: lightblue; */
   overflow: hidden;
+  display: block;
 `;
